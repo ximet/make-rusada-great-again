@@ -1,0 +1,107 @@
+[
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "v1",
+        "type": "uint256"
+      },
+      {
+        "name": "v2",
+        "type": "uint256"
+      },
+      {
+        "name": "v3",
+        "type": "uint256"
+      }
+    ],
+    "name": "test",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "person",
+        "type": "uint256"
+      }
+    ],
+    "name": "passed",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "person",
+        "type": "uint256"
+      }
+    ],
+    "name": "getResultDetails",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "person",
+        "type": "uint256"
+      },
+      {
+        "name": "v1",
+        "type": "uint256"
+      },
+      {
+        "name": "v2",
+        "type": "uint256"
+      },
+      {
+        "name": "v3",
+        "type": "uint256"
+      }
+    ],
+    "name": "saveResults",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  }
+]
