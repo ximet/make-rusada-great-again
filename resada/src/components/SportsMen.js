@@ -20,7 +20,11 @@ class App extends Component {
                 <div className="content">
                     <h1>Has passed: <strong className={passed === 'false' ? "failed" : "passed"}>{passed}</strong></h1>
                     <h1>Details: {result.split(',').join('      ')}</h1>
-                    <button className="button buttonRedirect" onClick={() => this.redirect(routesConfig.root.path)}>Enter new results</button>
+                    <button
+                        className="button buttonRedirect"
+                        onClick={() => this.redirect(routesConfig.root.path)}>
+                        Show other results
+                    </button>
                 </div>
             </div>
         );
