@@ -3,6 +3,10 @@ import './App.css';
 import logo from '../assets/rings.gif';
 import Button from 'antd/lib/button';
 import 'antd/lib/button/style/index.css';
+import Input from 'antd/lib/input';
+import 'antd/lib/input/style/index.css';
+import Col from 'antd/lib/col';
+import Row from 'antd/lib/row';
 import routesConfig from '../routing/routesConfig';
 import Web3 from 'web3';
 
@@ -46,15 +50,23 @@ class App extends Component {
             <div className="App">
                 <img src={logo} className={submitting ? "App-logo loading" : "App-logo"} alt="logo"/>
 
-                <div className="content">
-                    <Button type="primary" onClick={() => this.redirect(routesConfig.sportsmen.path)}>Go to
-                        Results</Button>
-                    <Button
+            <div className="content">
+<div className="form">
+                  <Row gutter={16} align="middle" justify="center">
+                  <Col span={10} offset="7">
+                    <Input placeholder="Имя" />
+                    <Input placeholder="Cтенболон" />
+                    <Input placeholder="Этилэстренол" />
+                    <Input placeholder="Метриболон" />
+                  </Col>
+                  </Row>
+                  <button className="button buttonSave" size="large" type="danger">Save...</button>
+                </div>                <Button type="primary" className="goToButton"onClick={() => this.redirect(routesConfig.sportsmen.path)}>Go to Results</Button><Button
                         type="primary"
                         onClick={() => this.submit()}
                     >Submit</Button>
-                </div>
             </div>
+        </div>
 
 
         );
