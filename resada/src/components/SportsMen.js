@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Button from 'antd/lib/button';
-import routesConfig from '../routesConfig';
+import routesConfig from '../routing/routesConfig';
 
 class App extends Component {
     constructor(props) {

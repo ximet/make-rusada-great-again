@@ -3,7 +3,13 @@
 }
 
 .App-logo {
-  height: 500px;
+  visibility: hidden;
+  transition: all .5s ease-out;
+  height: 200px;
+}
+
+.App-logo.loading {
+  visibility: visible;
 }
 
 .App-intro {

@@ -2,8 +2,8 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 import routesConfiguration from './routesConfig';
-import App from './components/App';
-import SportsMen from './components/SportsMen';
+import App from '../components/App';
+import SportsMen from '../components/SportsMen';
 
 const {
           root,
