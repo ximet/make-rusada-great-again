@@ -9,3 +9,10 @@
 .App-intro {
   font-size: large;
 }
+
+.form {
+  margin-top: 30px;
+}
+.buttonSave {
+  margin-top: 5px;
+}
