@@ -45,6 +45,14 @@ input.ant-input {
     opacity: 0.7;
 }
 
+.content .passed {
+    color: limegreen;
+}
+
+.content .failed {
+    color: tomato;
+}
+
 .buttonSave {
     color: yellowgreen;
     border-color: yellowgreen;

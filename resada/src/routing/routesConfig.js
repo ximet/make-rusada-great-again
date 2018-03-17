@@ -6,7 +6,7 @@ const routesConfiguration = {
     },
     sportsmen: {
         key: 'sportsmen',
-        path: '/sportsmen'
+        path: '/sportsmen/:passed/:result'
     }
 };
 

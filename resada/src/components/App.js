@@ -24,7 +24,6 @@ class App extends Component {
         this.redirect = this.redirect.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.handleGetAccounts = this.handleGetAccounts.bind(this);
     }
 
     setWeb3() {
@@ -32,42 +31,26 @@ class App extends Component {
         this.web3.setProvider(new Web3.providers.HttpProvider("http://10.10.104.37:8545"));
 
         const myContract = this.web3.eth.contract(json);
-        this.contractInstance = myContract.at('0x7f42f88091b56fe13cc7a0c17cab7997208dc859');
+        this.contractInstance = myContract.at('0x681d41c00c0d921491eebe7e55449f9bb2cd04bd');
 
-    }
-
-    handleGetAccounts(accounts) {
-        debugger;
-        console.log(accounts);
     }
 
     handleSubmit() {
+        if(!this.state.values.name) {
+            return;
+        }
         this.setState({submitting: true});
-        const {name, stenobolon, etilestirol, metribolon} = this.state;
-        this.contractInstance.saveResults(
-            parseInt(name),
-            parseInt(stenobolon),
-            parseInt(etilestirol),
-            parseInt(metribolon),
-            {
-                from: '0x71174fe05F7d03E65e2C894Baa36c09f80F3c02C',
-                to: '0x7f42f88091b56fe13cc7a0c17cab7997208dc859'
-            }).then(() => {
-            this.setState({submitting: false});
-        });
-        this.setState({values: {}});
+        setTimeout(() => this.redirect(parseInt(this.state.values.name), routesConfig.sportsmen.path), 1500);
     }
 
     handleChange({target}) {
         this.setState(({values}) => ({values: {...values, [target.name]: target.value}}));
     }
 
-    redirect(path) {
-        console.log(this.contractInstance.passed(3).toString());
-        console.log(this.contractInstance.getResultDetails(3).toString());
-        //this.web3.eth.getAccounts(this.handleGetAccounts);
-
-        this.props.history.push(path);
+    redirect(param, path) {
+        const passed = this.contractInstance.passed(param).toString();
+        const result = this.contractInstance.getResultDetails(param).toString();
+        this.props.history.push(`${path.replace(':passed', passed).replace(':result', result)}`);
     }
 
     render() {
@@ -85,12 +68,9 @@ class App extends Component {
                                 <Input placeholder="Метриболон" onChange={this.handleChange} name="metribolon"/>
                             </Col>
                         </Row>
-                        <button className="button buttonSave" size="large" type="danger" onClick={this.handleSubmit}>
-                            Save...
-                        </button>
                     </div>
                     <button className="button buttonRedirect"
-                            onClick={() => this.redirect(routesConfig.sportsmen.path)}>Go to Results
+                            onClick={this.handleSubmit}>Go to Results
                     </button>
                 </div>
             </div>

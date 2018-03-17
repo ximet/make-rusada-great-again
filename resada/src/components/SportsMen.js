@@ -14,9 +14,12 @@ class App extends Component {
     }
 
     render() {
+        const {match: {params: {passed, result}}} = this.props;
         return (
             <div className="App">
                 <div className="content">
+                    <h1>Has passed: <strong className={passed === 'false' ? "failed" : "passed"}>{passed}</strong></h1>
+                    <h1>Details: {result.split(',').join('      ')}</h1>
                     <button className="button buttonRedirect" onClick={() => this.redirect(routesConfig.root.path)}>Enter new results</button>
                 </div>
             </div>
