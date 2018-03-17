@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import logo from './assets/circles.gif';
+import logo from './assets/rings.gif';
+import Button from 'antd/lib/button';
+import 'antd/lib/button/style/index.css';
 import routesConfig from './routesConfig';
 
 class App extends Component {
@@ -14,12 +16,17 @@ class App extends Component {
     this.props.history.push(path);
   }
 
-
   render() {
     return (
-      <div className="App">
-          <img src={logo} className="App-logo" alt="logo" onClick={() => this.redirect(routesConfig.sportsmen.path)}/>
-      </div>
+        <div className="App">
+            <img src={logo} className="App-logo" alt="logo" />
+
+            <div className="content">
+                <Button type="primary" onClick={() => this.redirect(routesConfig.sportsmen.path)}>Hello world!</Button>
+            </div>
+        </div>
+
+
     );
   }
 }
