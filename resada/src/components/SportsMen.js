@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
-import routesConfig from './routesConfig';
+import Button from 'antd/lib/button';
+import routesConfig from '../routesConfig';
 
 class App extends Component {
     constructor(props) {
@@ -16,7 +17,9 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <h1 onClick={() => this.redirect(routesConfig.root.path)}>Sportsmen</h1>
+                <div className="content">
+                    <Button type="primary" onClick={() => this.redirect(routesConfig.root.path)}>Enter new results</Button>
+                </div>
             </div>
         );
     }

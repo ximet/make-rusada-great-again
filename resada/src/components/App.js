@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import logo from './assets/rings.gif';
+import logo from '../assets/rings.gif';
 import Button from 'antd/lib/button';
 import 'antd/lib/button/style/index.css';
-import routesConfig from './routesConfig';
+import routesConfig from '../routesConfig';
 
 class App extends Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
 
             <div className="content">
-                <Button type="primary" onClick={() => this.redirect(routesConfig.sportsmen.path)}>Hello world!</Button>
+                <Button type="primary" onClick={() => this.redirect(routesConfig.sportsmen.path)}>Go to Results</Button>
             </div>
         </div>
 
