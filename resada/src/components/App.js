@@ -38,7 +38,6 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
 
             <div className="content">
-                <Button type="primary" onClick={() => this.redirect(routesConfig.sportsmen.path)}>Go to Results</Button>
 
                 <div className="form">
                   <Row gutter={16} align="middle" justify="center">
@@ -49,9 +48,11 @@ class App extends Component {
                     <Input placeholder="Метриболон" />
                   </Col>
                   </Row>
-                  <Button className="buttonSave" size="large" type="primary">Save...</Button>
+                  <Button className="buttonSave" size="large" type="danger">Save...</Button>
                 </div>
                
+                <Button type="primary" className="goToButton" onClick={() => this.redirect(routesConfig.sportsmen.path)}>Go to Results</Button>
+
             </div>
         </div>
 
