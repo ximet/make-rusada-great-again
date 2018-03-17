@@ -48,7 +48,7 @@ class App extends Component {
                     <Input placeholder="Метриболон" />
                   </Col>
                   </Row>
-                  <Button className="buttonSave" size="large" type="danger">Save...</Button>
+                  <button className="button buttonSave" size="large" type="danger">Save...</button>
                 </div>
                
                 <Button type="primary" className="goToButton" onClick={() => this.redirect(routesConfig.sportsmen.path)}>Go to Results</Button>
