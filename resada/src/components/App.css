@@ -12,6 +12,10 @@
   visibility: visible;
 }
 
+input.ant-input {
+  margin: 5px 0;
+}
+
 .App-intro {
   font-size: large;
 }
@@ -33,10 +37,7 @@
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: 0 15px;
-  font-size: 14px;
   border-radius: 4px;
-  height: 32px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -47,15 +48,13 @@
   position: relative;
   color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
-  border-color: #d9d9d9;
   font-size: 16px;
-  border-radius: 4px;
   height: 40px;
 }
 .buttonSave {
   margin: 10px;
   padding: 0 15%;
 
-  color: #f5222d;
-  border-color: #f5222d;
+  color: yellowgreen;
+  border-color: yellowgreen;
 }
